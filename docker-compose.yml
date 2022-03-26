@@ -7,9 +7,6 @@ services:
       context: .
     ports:
       - "3000:3000"
+    command: bash -c "npm install && npm run dev"
     volumes:
       - .:/usr/src/app
-      - some-node-modules:/usr/src/app/node_modules
-
-volumes:
-  some-node-modules:
